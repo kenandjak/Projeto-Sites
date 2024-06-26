@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/*Preto, Roxo, Azul, Dourado*/
+:root {
+    --cor0: #000000;
+    --cor1: #191268;
+    --cor2: #271CA3;
+    --cor3: #3f1085;
+    --cor4: #821FC0;
+    --cor5: #856b00;
+    --cor6: #7351A2;
+
+}
+
+body {
+    /*background-image: url(./hp_imagens/background.jpg);*/
+    background-image: linear-gradient(to bottom, #856b00, #000000);
+    background-position: top center;
+    color: #ffffff;
+}

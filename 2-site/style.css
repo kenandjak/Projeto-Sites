@@ -11,13 +11,13 @@ Dourado: #856b00*/
     src: url('./hp_fontes/BluuNext-Bolditalic.otf') format('opentype');
 }
 :root {
-    --cor0: #000000;
-    --cor1: #191268;
-    --cor2: #271CA3;
-    --cor3: #3f1085;
-    --cor4: #821FC0;
-    --cor5: #bf9b0c;
-    --cor6: #7351A2;
+    --cor0: #000000; /*check*/
+    --cor1: #0B082E; /*check*/
+    --cor2: #120D4B; /*check*/
+    --cor3: #191268;
+    --cor4: #3f1085;
+    --cor5: #bf9b0c; /*check*/
+    --cor6: #6a518d;
 
     --fonte-potter: 'HP',Times, serif;
     --fonte-destaque: "Wizard", cursive;
@@ -27,14 +27,14 @@ Dourado: #856b00*/
 
 body {
     /*background-image: url(./hp_imagens/background.jpg);*/
-    background-image: linear-gradient(to bottom, #3f1085, #000000);
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor0));
     background-position: top center;
     font-family: var(--fonte-padrao);
     color: #ffffff;
 }
 
 header {
-    background: var(--cor0);
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor0));
     min-height: 150px;
     text-align: center;
     padding-top: 40px;
@@ -42,7 +42,7 @@ header {
 }
 header > h1 {
     font-family: var(--fonte-potter);
-    font-size: 6em; 
+    font-size: 6.2em; 
 }
 header > p {
     font-family: var(--fonte-destaque);
@@ -50,8 +50,57 @@ header > p {
     color: var(--cor5);
 }
 
+nav {
+    background: var(--cor0);
+    text-align: center;
+}
+
+nav > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+main {
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto
+}
+main h2 {
+    font-size: 2.5em;
+    font-family: var(--fonte-destaque);
+    color: var(--cor5);
+}
+article p {
+    text-align: justify;
+    text-indent: 25px;
+    font-size: 1.6em;
+}
+main a {
+    color: var(--cor5);
+    text-decoration: none;
+}
+main a:hover{
+    text-decoration: underline;
+    transition: 0.6s;
+}
 main img {
     width: 20%;
     display: block;
     margin: auto;
+}
+
+#local {
+    font-family: var(--fonte-manuscrita);
+    color: var(--cor5);
+    display: block;
+    text-align: justify;
+    font-size: 1.8em;
+}
+
+aside {
+    background-color: var(--cor0);
+    color: var(--cor5);
+    font-family: var(--fonte-destaque);
+    font-weight: normal;
+    font-size: 2em;
+    
 }

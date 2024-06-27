@@ -1,19 +1,57 @@
 @charset "UTF-8";
-/*Preto, Roxo, Azul, Dourado*/
+/*Preto, Roxo, Azul, Dourado
+Dourado: #856b00*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@font-face {
+    font-family: 'HP';
+    src: url('./hp_fontes/HARRYP__.TTF') format('truetype');
+}
+@font-face {
+    font-family: 'Wizard';
+    src: url('./hp_fontes/BluuNext-Bolditalic.otf') format('opentype');
+}
 :root {
     --cor0: #000000;
     --cor1: #191268;
     --cor2: #271CA3;
     --cor3: #3f1085;
     --cor4: #821FC0;
-    --cor5: #856b00;
+    --cor5: #bf9b0c;
     --cor6: #7351A2;
 
+    --fonte-potter: 'HP',Times, serif;
+    --fonte-destaque: "Wizard", cursive;
+    --fonte-padrao: Times, Arial, Verdana, Helvetica, serif;
+    --fonte-manuscrita:"Great Vibes", cursive;
 }
 
 body {
     /*background-image: url(./hp_imagens/background.jpg);*/
-    background-image: linear-gradient(to bottom, #856b00, #000000);
+    background-image: linear-gradient(to bottom, #3f1085, #000000);
     background-position: top center;
+    font-family: var(--fonte-padrao);
     color: #ffffff;
+}
+
+header {
+    background: var(--cor0);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 0.5px;
+}
+header > h1 {
+    font-family: var(--fonte-potter);
+    font-size: 6em; 
+}
+header > p {
+    font-family: var(--fonte-destaque);
+    font-size: 1.6em;
+    color: var(--cor5);
+}
+
+main img {
+    width: 20%;
+    display: block;
+    margin: auto;
 }

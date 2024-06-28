@@ -44,6 +44,7 @@ header {
 header > h1 {
     font-family: var(--fonte-potter);
     font-size: 6.4em; 
+    font-weight: lighter;
     text-shadow: 8px 7px var(--cor3);
 }
 header > p {
@@ -56,7 +57,7 @@ header > p {
 nav {
     background: var(--cor0);
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 12px;
     box-shadow: 0px 7px 9px var(--cor4);
 }
@@ -76,14 +77,14 @@ main {
     padding: 20px;
 }
 main h2 {
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-family: var(--fonte-destaque);
     color: var(--cor5);
 }
 article p {
     text-align: justify;
     text-indent: 25px;
-    font-size: 1.6em;
+    font-size: 1.35em;
 }
 main a {
     color: var(--cor5);
@@ -124,7 +125,7 @@ main img {
     color: var(--cor5);
     display: block;
     text-align: justify;
-    font-size: 1.8em;
+    font-size: 1.3em;
 }
 
 aside {
@@ -132,7 +133,7 @@ aside {
     color: var(--cor5);
     font-family: var(--fonte-destaque);
     font-weight: normal;
-    font-size: 1.7em; 
+    font-size: 1.4em; 
 }
 aside ul {
     font-size: 0.7em;
@@ -146,7 +147,7 @@ aside a:hover {
 
 footer {
     text-align: center;
-    font-size: 1.1em;
+    font-size: 0.9em;
     font-family: var(--fonte-destaque);
 }
 footer a {

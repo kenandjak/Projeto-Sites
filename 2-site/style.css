@@ -1,11 +1,7 @@
 @charset "UTF-8";
 /*Preto, Roxo, Azul, Dourado
 Dourado: #856b00*/
-@media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-    }
-  }
+
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @font-face {
     font-family: 'HP';
@@ -19,13 +15,13 @@ Dourado: #856b00*/
     --cor0: #000000; /*check*/
     --cor1: #0B082E; /*check*/
     --cor2: #120D4B; /*check*/
-    --cor3: #191268;
-    --cor4: #3f1085;
+    --cor3: #2c2c2c6b;/*check*/
+    --cor4: #3f108572;/*check*/
     --cor5: #bf9b0c; /*check*/
-    --cor6: #6a518d;
+    --cor6: #6a518d; /*check*/
 
-    --fonte-potter: 'HP',Times, serif;
-    --fonte-destaque: "Wizard", cursive;
+    --fonte-potter: 'HP','Wizard',Times, serif;
+    --fonte-destaque: 'Wizard', cursive;
     --fonte-padrao: Times, Arial, Verdana, Helvetica, serif;
     --fonte-manuscrita:"Great Vibes", cursive;
 }
@@ -47,12 +43,14 @@ header {
 }
 header > h1 {
     font-family: var(--fonte-potter);
-    font-size: 6.2em; 
+    font-size: 6.4em; 
+    text-shadow: 8px 7px var(--cor3);
 }
 header > p {
     font-family: var(--fonte-destaque);
     font-size: 1.6em;
     color: var(--cor5);
+    text-shadow: 3px 2px var(--cor3);
 }
 
 nav {
@@ -60,10 +58,12 @@ nav {
     text-align: center;
     font-size: 1.5em;
     padding: 12px;
+    box-shadow: 0px 7px 9px var(--cor4);
 }
 nav > a {
     text-decoration: none;
     color: #ffffff;
+    padding: 15px;
 }
 nav a:hover {
     text-decoration: underline;
@@ -72,7 +72,8 @@ nav a:hover {
 main {
     min-width: 300px;
     max-width: 1000px;
-    margin: auto
+    margin: auto;
+    padding: 20px;
 }
 main h2 {
     font-size: 2.5em;
@@ -94,19 +95,28 @@ main a:hover{
 }
 main img {
     /*Como adicionar borda nas imagens?*/
-    /*Como colocar uma imagem ao lado da outra?*/
-    width: 100%;
+    width: 90%;
     border: var(--cor5);
     display: block;
     margin: auto;
 }
+/*Para deixar as imagens alinhadas:*/
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
-  
 .column {
-    flex: 33.33%;
-    padding: 12px;
+    width: 60%;
+    margin: auto;
+    padding: 0.7rem;
+}
+/*Para tornar as imagens responsivas*/
+@media (min-width: 768px) {
+    .column{
+        /*Com 100%/3 a 3ª imagem quebrava, não ficava alinhada*/
+        /*Só deu certo com 100%/4*/
+        width: calc(100% / 4);
+    }
 }
 
 #local {
@@ -122,9 +132,26 @@ aside {
     color: var(--cor5);
     font-family: var(--fonte-destaque);
     font-weight: normal;
-    font-size: 2em; 
+    font-size: 1.7em; 
+}
+aside ul {
+    font-size: 0.7em;
+}
+aside a:hover {
+    background-color: var(--cor6);
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 3px;
 }
 
-aside p {
-    font-size: 1.7em;
+footer {
+    text-align: center;
+    font-size: 1.1em;
+    font-family: var(--fonte-destaque);
+}
+footer a {
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
 }

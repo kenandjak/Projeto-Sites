@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&display=swap');
+
+@font-face {
+    font-family: 'celta';
+    src: url('./fontes/morris_roman/MorrisRomanBlack.ttf') format('truetype');
+}
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'celta', Times, serif;
+    --fonte3: "Playwrite GB S", cursive;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /*vh -> altura (view height)*/
+    background-image: linear-gradient(#ffffff,#a1a1a1);
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+header > h1 {
+    padding-top: 50px;
+    /*Todas maiúsculas: text-transform: uppercase; */
+    font-variant: small-caps;
+    font-family: var(--fonte2);
+    font-size: 3.5em;
+}
+header > p {
+    padding-bottom: 50px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    /*Coloca a tag <pre> nos parágrafos e white-space
+      para quebrar linha automaticamente.*/
+    white-space: inherit;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte3);
+}
+section.normal {
+    background-color: #ffffff;
+}
+section.imagem {
+    background-size: cover;
+    box-shadow: inset 6px 6px 13px 0px #00000077;
+    background-attachment: fixed; /*A joia do efeito parallax*/
+}
+section pre {
+    font-family: var(--fonte3);
+    font-size: 1.5em; 
+    text-shadow: 2px 2px 0px #ffffff; 
+}
+section.imagem pre{
+    background-color: #80808067;
+    display: inline-block;
+    padding: 5px;
+
+}
+section#img01 {
+    background-image: url(./imagens/img01.jpg);
+}
+section#img02 {
+    background-image: url(./imagens/img02.jpg);
+}
+
+footer {
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}

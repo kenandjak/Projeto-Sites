@@ -7,9 +7,11 @@
 :root {
     --cor0: #ffffff;
     --cor1: #F8FA90;
-    --cor2: #FFAB35;
+    --cor2: #f8fb6c;
     --cor3: #D87093;
     --cor4: #bd5ad8;
+    --cor5: #c0c0c0;
+    /*--cor2: #FFAB35;*/
 
     --fonte-destaque: "Cinzel", serif;
     --fonte-titulo: "Baskervville SC", serif;
@@ -18,17 +20,49 @@
 }
 
 body {
-    /*background: url(imagens/background.jpg) no-repeat;*/
+    background: linear-gradient(to bottom, var(--cor0), var(--cor5));
+    background-size: 800px 1000px;
     font-family: var(--fonte-padrão);
 }
 
+header {
+    background-image: url(imagens/background1.jpg);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 1px;
+}
 header > h1 {
-    color: var(--cor1);
+    color: var(--cor2);
     font-family: var(--fonte-destaque);
     font-size: 5em;
+    text-shadow: 2px 2px 3px #000000; /*tente melhorar*/
 }
-header > p {
+/*header > p {
+    background: #c0c0c05f;
+    padding-bottom: 20px;
+    color: var(--cor1);
     font-family: var(--fonte-destaque);
+    font-size: 2.5em;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px #000000;
+}*/
+nav {
+    background: #c0c0c06e;
+    text-align: center;
+    font-size: 1.6em;
+    padding: 12px;
+    box-shadow: 1px 2px 0px #00000048;
+}
+nav > a {
+    color: var(--cor0);
+    text-decoration: none;
+    text-shadow: 0.8px 0.8px 1.2px #000000;
+    padding: 15px;
+}
+nav a:hover {
+    color: var(--cor1);
+    text-decoration: underline;
 }
 
 main h2 {

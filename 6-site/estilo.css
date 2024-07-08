@@ -1,5 +1,40 @@
 @charset "UTF-8";
+/*Branco, Rosa, Dourado, Laranja, Lilás*/
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+FR+Trad:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+:root {
+    --cor0: #ffffff;
+    --cor1: #F8FA90;
+    --cor2: #FFAB35;
+    --cor3: #D87093;
+    --cor4: #bd5ad8;
+
+    --fonte-destaque: "Cinzel", serif;
+    --fonte-titulo: "Baskervville SC", serif;
+    --fonte-aside: "Playwrite FR Trad", cursive;
+    --fonte-padrão: Times, Arial, Verdana, Helvetica, serif;
+}
 
 body {
-    background: url(imagens/background.jpg) no-repeat;
+    /*background: url(imagens/background.jpg) no-repeat;*/
+    font-family: var(--fonte-padrão);
+}
+
+header > h1 {
+    color: var(--cor1);
+    font-family: var(--fonte-destaque);
+    font-size: 5em;
+}
+header > p {
+    font-family: var(--fonte-destaque);
+}
+
+main h2 {
+    font-family: var(--fonte-titulo);
+}
+
+aside h3 {
+    font-family: var(--fonte-titulo);
 }
